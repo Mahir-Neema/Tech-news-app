@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Articles from './Components/Articles'
+import React from 'react'
 import Search from './Components/Search'
+import Articles from './Components/Articles'
 import Pagination from './Components/Pagination'
+// import { useContext } from "react";
+// import { AppContext } from './Components/Context' 
+import { useGlobalContext } from './Components/Context';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-    <div>This is a news app.</div>
+  // const data = useContext(AppContext); 
+  const data = useGlobalContext();
+  return (<>
+    <div>This is a news App{data}</div>
     <Search/>
     <Pagination/>
     <Articles/>
