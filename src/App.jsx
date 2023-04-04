@@ -10,7 +10,7 @@ function App() {
   // const data = useContext(AppContext); 
   const data = useGlobalContext(); 
   return (<>
-    <div>This is a news App{data}</div>
+    <div>This is a news App</div>
     <Search/>
     <Pagination/>
     <Articles/>
