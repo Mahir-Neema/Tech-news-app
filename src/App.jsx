@@ -8,7 +8,7 @@ import { useGlobalContext } from './Components/Context';
 
 function App() {
   // const data = useContext(AppContext); 
-  const data = useGlobalContext();
+  const data = useGlobalContext(); 
   return (<>
     <div>This is a news App{data}</div>
     <Search/>
