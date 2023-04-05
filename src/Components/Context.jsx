@@ -17,6 +17,10 @@ const AppProvider = ({children}) => {
 
     const [state,dispatch] = useReducer(reducer,initialstate);
 
+    const deletePost = (ID) =>{
+        dispatch({type: "DELETE_POST", payload: ID});
+    }
+
     useEffect(()=>{
         fetchAPIData(`${APIURL}query=${state.query}&page=${state.page}`); 
     },[]) 
@@ -42,7 +46,7 @@ const AppProvider = ({children}) => {
     }
 
     return (
-        <AppContext.Provider value={{...state}}>
+        <AppContext.Provider value={{...state,deletePost}}>
             {children}
         </AppContext.Provider>
     )

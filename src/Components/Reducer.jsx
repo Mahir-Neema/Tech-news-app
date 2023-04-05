@@ -12,6 +12,11 @@ const reducer = (state,action) => {
                 hits: action.payload.hits,
                 nofPages: action.payload.nbPages
             }
+        case "DELETE_POST":
+            return{
+                ...state,
+                hits: state.hits.filter((currElem)=>currElem.objectID !== action.payload)
+            }
     }
     return state;
 }
