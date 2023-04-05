@@ -17,6 +17,12 @@ const reducer = (state,action) => {
                 ...state,
                 hits: state.hits.filter((currElem)=>currElem.objectID !== action.payload)
             }
+        case "SEARCH_ARTICLE":
+            return{
+                ...state,
+                query: action.payload
+            }
+        
     }
     return state;
 }

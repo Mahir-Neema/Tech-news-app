@@ -21,9 +21,13 @@ const AppProvider = ({children}) => {
         dispatch({type: "DELETE_POST", payload: ID});
     }
 
+    const searchPost = (searchquery) =>{
+        dispatch({type: "SEARCH_ARTICLE", payload: searchquery});
+    }
+
     useEffect(()=>{
         fetchAPIData(`${APIURL}query=${state.query}&page=${state.page}`); 
-    },[]) 
+    },[state.query]) 
 
     const fetchAPIData = async (apiurl) => {
         
@@ -46,7 +50,7 @@ const AppProvider = ({children}) => {
     }
 
     return (
-        <AppContext.Provider value={{...state,deletePost}}>
+        <AppContext.Provider value={{...state,deletePost,searchPost}}>
             {children}
         </AppContext.Provider>
     )
