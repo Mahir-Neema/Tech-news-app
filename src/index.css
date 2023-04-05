@@ -1,6 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 :root {
-  font-family: Finger Paint,cursive;
+  font-family: 'Varela Round', sans-serif;
+  /* font-family: Finger Paint,cursive;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,5 +15,5 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-} */
+  -webkit-text-size-adjust: 100%; */
+}

@@ -3,7 +3,7 @@ import { useGlobalContext } from './Context';
 import "./Articles.css"
 
 function Articles() {
-    const {hits,nofPages,isLoading,deletePost} = useGlobalContext();
+    const {hits,isLoading,deletePost} = useGlobalContext();
 
     if(isLoading){
         return<>
@@ -12,7 +12,6 @@ function Articles() {
     }
 
     return (<>
-        <div>Tech News</div>
         {hits.map((post)=>{
             const {title,author,objectID, url, num_comments} = post;
             return <>
