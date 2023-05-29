@@ -14,6 +14,12 @@ function Search() {
           onChange={(e)=>searchPost(e.target.value)}
         />
       </form>
+      <div className='tags'>
+        <button onClick={()=>searchPost('Angular')} className='tag'>Angular</button>
+        <button onClick={()=>searchPost('Nextjs')} className='tag'>Next JS</button>
+        <button onClick={()=>searchPost('sql')} className='tag'>SQL</button>
+        <button onClick={()=>searchPost('Github')} className='tag'>Github</button>
+      </div>
     </div>
     </>
   )

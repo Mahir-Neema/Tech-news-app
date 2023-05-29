@@ -3,3 +3,19 @@
     padding: 4px 10px;
     border-radius: 2px;
 }
+
+.tags{
+    padding: 4px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tag{
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
